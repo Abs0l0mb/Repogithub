@@ -1,0 +1,11 @@
+pour faire un git, créer un dossier (en ligne de commande par exemple avec mkdir)
+git init : initialiser le repertoire (formater)
+touch fichier.txt
+vim fichier.txt
+:x
+git add fichier.txt
+git commit -m "message"
+git commit -a -m "messageDeMaj"
+git clone URL (HTTPS ou SSH)
+git push origin master
+
