@@ -1,0 +1,72 @@
+[200~/******************************************************************************
+
+                            Online C Compiler.
+			                    Code, Compile, Run and Debug C program online.
+					    Write your code in this editor and press "Run" button to compile and execute it.
+
+					    *******************************************************************************/
+
+					    #include <stdio.h>
+					    #include <stdlib.h>
+					    #include <time.h>
+
+					    int main()
+					    {
+					        int Playing = 1;
+						    int min = 1;
+						        int max = 100;
+							    int lv = 1;
+							        int redaction = 0;
+								    int found = 0;
+								        int tries = 0;
+									    do 
+									        {
+										        printf("Hello and welcome in a fabulous dichotomy test \n Choose a level of difficulty (1 to 3) : \n "); 
+											    
+											            scanf("%d", &lv);
+												        
+													        if (lv == 2)
+														        {
+															            max = 1000;
+																            }
+																	             if (lv == 3)
+																		             {
+																			                 max = 10000;
+																					         }
+																						     
+																						         
+																							     
+																							             srand(time(NULL));
+																								             int nb = (rand() % (max - min + 1)) + min;
+																									             printf("Try to find the mystery number ! \n");
+																										             
+																											             do
+																												             {
+																													                 printf("Pick a number from %d to %d : \n", min, max);
+																															             scanf("%d", &redaction);
+																																                 if (redaction < nb)
+																																		             {
+																																			                     printf(" too low ! \n");
+																																					                 }
+																																							             if (redaction > nb)
+																																								                 {
+																																										                 printf("too high ! \n");
+																																												             }
+																																													                 if (redaction == nb)
+																																															             {
+																																																                     printf("good job, you found me in %d tries. \n wanna replay ? (0 = no, 1 = yes) \n",tries);
+																																																		                     found = 1;
+																																																				                 }
+																																																						             tries++;
+																																																							             }
+																																																								             while(found == 0);
+																																																									             
+																																																										             scanf("%d",&Playing);
+																																																											         
+																																																												     }
+																																																												         while(Playing == 1);
+																																																													     
+																																																													         return 0;
+																																																														 }
+
+
